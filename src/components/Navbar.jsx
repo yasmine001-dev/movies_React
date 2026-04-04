@@ -6,15 +6,17 @@ function NavbarEl() {
     <>
      <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Floura</Navbar.Brand>
+          <Container fluid className="text-warning text-left">
+        <h2>AraCima</h2>
+      </Container>
+          {/* <Navbar.Brand href="#home">AraCima</Navbar.Brand> */}
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#features">Movies</Nav.Link>
+            {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
           </Nav>
         </Container>
       </Navbar>
-      <br />
       </>
   );
 }

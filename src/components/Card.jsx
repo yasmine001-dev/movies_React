@@ -10,16 +10,23 @@ function CardComponent({ movieInfo }) {
     }
   };
   return (
-    <Card>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-      <Card.Body>
-        <Card.Img
+<Card 
+className="h-100 border-0 overflow-hidden m-0 text-light"
+style={{ backgroundColor: '#1A1A1A' }} 
+>
+        {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+         <Card.Img
           variant="top"
           src={movieInfo.image}
           style={{ height: "400px",width: "100%", objectFit: "cover" }}
         />
-        <Card.Title style={{ userSelect: "auto", WebkitUserSelect: "auto", margin:"10px"}}>
-          {movieInfo.title.toUpperCase()}
+      <Card.Body >
+       
+        <Card.Title
+        style={{ userSelect: "auto", WebkitUserSelect: "auto", margin:"10px"}}
+        className="text-uppercase mb-3 w-100"
+        >
+          {movieInfo.title}
         </Card.Title>
         <Card.Text>
           <p className="mb-2 text-secondary">Year: {movieInfo.year} </p>
@@ -36,7 +43,7 @@ function CardComponent({ movieInfo }) {
                   ? "warning"
                   : "success"
           }
-          className="mt-auto"
+          className="mt-auto w-100"
           onClick={handleBuyTicket}
           disabled={ticketsCount === 0}
         >

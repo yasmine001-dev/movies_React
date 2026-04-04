@@ -4,4 +4,6 @@ img {
 body {
   user-select: none;
   -webkit-user-select: none;
+  background-color: #141414 ; 
+  color: #ffffff ;
 }
