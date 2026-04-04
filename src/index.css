@@ -1,0 +1,7 @@
+img {
+  -webkit-user-drag: none;
+}
+body {
+  user-select: none;
+  -webkit-user-select: none;
+}
