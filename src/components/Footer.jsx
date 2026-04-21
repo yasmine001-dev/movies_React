@@ -1,82 +1,44 @@
-import React from "react";
-import "../css/Footer.css";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import "../css/Footer.module.css";
+
 function Footer() {
   return (
-    <>
-      <footer>
- 
-  <div class="footer-main">
-    <div class="footer-container">
-      <div class="footer-grid">
- 
-        
- 
-        <div class="footer-col">
-          <h4>تسوّق</h4>
-          <ul>
-            <li><a href="#">نباتات داخلية</a></li>
-            <li><a href="#">نباتات خارجية</a></li>
-            <li><a href="#">عصاريات وصبار</a></li>
-            <li><a href="#">نباتات معلّقة</a></li>
-            <li><a href="#">أدوات الزراعة</a></li>
-            <li><a href="#">أصص وديكور</a></li>
-          </ul>
-        </div>
- 
-        <div class="footer-col">
-          <h4>مساعدة</h4>
-          <ul>
-            <li><a href="#">عن المتجر</a></li>
-            <li><a href="#">دليل العناية</a></li>
-            <li><a href="#">سياسة الشحن</a></li>
-            <li><a href="#">الإرجاع والاستبدال</a></li>
-            <li><a href="#">الأسئلة الشائعة</a></li>
-            <li><a href="#">تواصل معنا</a></li>
-          </ul>
-        </div>
- 
-        <div class="footer-col">
-          <h4>تواصل معنا</h4>
-          <div class="contact-items">
-            <div class="contact-item">
-              <span class="contact-icon">📍</span>
-              <span>القاهرة، مصر – المعادي</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-icon">📞</span>
-              <span>01234 567 890</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-icon">✉️</span>
-              <span>hello@waraqwjuthoor.com</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-icon">🕐</span>
-              <span>السبت – الخميس: 9ص – 8م</span>
-            </div>
-          </div>
-        </div>
- 
-      </div>
-    </div>
-  </div>
- 
-  <div class="footer-bottom">
-    <div class="footer-container">
-      <div class="bottom-content">
-        <p>© 2025 ورق وجذور. جميع الحقوق محفوظة.</p>
-        <div class="bottom-links">
-          <a href="#">سياسة الخصوصية</a>
-          <span>·</span>
-          <a href="#">الشروط والأحكام</a>
-        </div>
-        <p class="made-with">صُنع بـ 🌿 وكثير من الحب</p>
-      </div>
-    </div>
-  </div>
- 
-      </footer>
-    </>
+    <footer className="bg-dark text-white py-4 mt-auto" data-bs-theme="dark">
+      <Container>
+        <Row className="mb-3">
+          <Col md={4} className="mb-3 mb-md-0">
+            <h5 className="text-warning">AraCima</h5>
+            <p className="text-secondary small mb-0">
+              Your go-to destination for movies and entertainment.
+            </p>
+          </Col>
+
+          <Col md={4} className="mb-3 mb-md-0">
+            <h6 className="text-white">Quick Links</h6>
+            <Nav className="flex-column">
+              <Nav.Link href="#home" className="text-secondary p-0 py-1">Home</Nav.Link>
+              <Nav.Link href="#features" className="text-secondary p-0 py-1">Movies</Nav.Link>
+            </Nav>
+          </Col>
+
+          <Col md={4}>
+            <h6 className="text-white">Contact</h6>
+            <p className="text-secondary small mb-1">support@aracima.com</p>
+            <p className="text-secondary small mb-0">© 2025 AraCima. All rights reserved.</p>
+          </Col>
+        </Row>
+
+        <hr className="border-secondary" />
+
+        <p className="text-center text-secondary small mb-0">
+          Made with ♥ by AraCima Team
+        </p>
+      </Container>
+    </footer>
   );
 }
+
 export default Footer;

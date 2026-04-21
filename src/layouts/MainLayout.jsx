@@ -1,14 +1,15 @@
-import Movies from '../pages/Movies';
-import Home from '../pages/Home';
+import Home from "../pages/Home";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
+// import { createBrowserRouter } from "react-router-dom";
+
 function MainLayout() {
   return (
     <>
-    <main>
-        <Outlet /> {/* نقطة العرض الديناميكية للمسارات */}
-      </main>
-    <Home/>
-      <Movies/>
+      <Navbar />
+<Outlet></Outlet>
+      <Footer />
     </>
   );
 }

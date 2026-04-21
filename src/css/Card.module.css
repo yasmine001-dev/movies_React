@@ -1,0 +1,10 @@
+.movieCardTitle {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  /* https://fonts.google.com/specimen/Oswald */
+  letter-spacing: 1px;
+  text-transform: uppercase !important;
+  margin-bottom: 1rem;
+  margin: 10px;
+}

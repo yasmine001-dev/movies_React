@@ -2,8 +2,25 @@ img {
   -webkit-user-drag: none;
 }
 body {
-  user-select: none;
-  -webkit-user-select: none;
-  background-color: #141414 ; 
-  color: #ffffff ;
+  /* user-select: none; */
+  /* -webkit-user-select: none; */
+  background-color: #141414;
+  color: #ffffff;
+}
+.onSale {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* خدي بالك الكلاس دا اتطبق ف مكان تاني ابقي شوفي  السبب */
+.active {
+  border-bottom: 2px solid #ffc107;
+  font-weight: 500;
 }

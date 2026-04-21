@@ -1,34 +1,31 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
+import styles from "../css/Card.module.css";
 function CardComponent({ movieInfo }) {
-  const [ticketsCount, setTicketsCount] = useState(movieInfo.ticket);
+  const [ticketsCount, setticketsCount] = useState(movieInfo.tickets);
   if (!movieInfo) return null;
-  const handleBuyTicket = () => {
-    if (ticketsCount > 0) {
-      setTicketsCount(ticketsCount - 1);
-    }
+  const handleBuytickets = () => {
+    // if (ticketsCount > 0) 
+      setticketsCount(ticketsCount - 1);
+    
   };
   return (
-<Card 
-className="h-100 border-0 overflow-hidden m-0 text-light"
-style={{ backgroundColor: '#1A1A1A' }} 
->
-        {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-         <Card.Img
-          variant="top"
-          src={movieInfo.image}
-          style={{ height: "400px",width: "100%", objectFit: "cover" }}
-        />
-      <Card.Body >
-       
-        <Card.Title
-        style={{ userSelect: "auto", WebkitUserSelect: "auto", margin:"10px"}}
-        className="text-uppercase mb-3 w-100"
-        >
+    <Card
+      className="h-100 border-0 overflow-hidden m-0 text-light"
+      style={{ backgroundColor: "#1A1A1A" }}
+    >
+      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+      <Card.Img
+        variant="top"
+        src={movieInfo.image}
+        style={{ height: "400px", width: "100%", objectFit: "cover" }}
+      />
+      <Card.Body>
+        <Card.Title className={`mb-3 w-100 ${styles.movieCardTitle}`}>
           {movieInfo.title}
         </Card.Title>
-        <Card.Text>
+        <Card.Text as="div">
           <p className="mb-2 text-secondary">Year: {movieInfo.year} </p>
           <p className="mb-2">Genre: {movieInfo.genre} </p>
           <p className="mb-2">Tickets: {ticketsCount} </p>
@@ -44,7 +41,7 @@ style={{ backgroundColor: '#1A1A1A' }}
                   : "success"
           }
           className="mt-auto w-100"
-          onClick={handleBuyTicket}
+          onClick={handleBuytickets}
           disabled={ticketsCount === 0}
         >
           But Now

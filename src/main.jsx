@@ -1,9 +1,12 @@
 import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css";
+import App from './App.jsx';
 
-import MainLayout from "./layouts/MainLayout.jsx";
 createRoot(document.getElementById('root')).render(
-    // <Home />
-    <MainLayout/>
+    <App/>
+
 )
+//npms: 
+// npm install styled-components
+//npm i styled-components
