@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Carousel from "../components/Carousel";
 import banner1 from "../assets/carousel-imgs/panda.jpg";
 import banner2 from "../assets/carousel-imgs/batman.png";
@@ -6,22 +6,14 @@ import banner3 from "../assets/carousel-imgs/deadpol.jpg";
 import banner4 from "../assets/carousel-imgs/Deadpool&Wolverine.jpg";
 import banner5 from "../assets/carousel-imgs/MoonKnight.jpg";
 import banner6 from "../assets/carousel-imgs/BreakingBad.jpg";
-import axios from "axios";
-import YellowSpinner from "../components/Spinner";
+
 
 // const banners = [
 
 function Home() {
-  ////start testing api///
-  async function getProducts() {
-    let { data } = await axios.get(`https://dummyjson.com/users`);
-    console.log(data.users);
-  }
 
-  useEffect(() => {
-    getProducts();
-  }, []);
-  /////END/////
+
+
   const [banners] = useState([
     {
       id: 1,

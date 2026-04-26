@@ -1,10 +1,10 @@
 import Spinner from "react-bootstrap/Spinner";
 
-function YellowSpinner() {
+function SpinnerY() {
   return (
     <>
       <Spinner animation="border" variant="secondary" />
     </>
   );
 }
-export default YellowSpinner;
+export default SpinnerY;

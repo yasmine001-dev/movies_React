@@ -5,19 +5,14 @@ import "../css/Navbar.module.css";
 import { Link, NavLink } from "react-router-dom";
 import LoginBtn from "./LoginBtn";
 import LogoutBtn from "./LogoutBtn";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 
 function NavbarEl() {
-  const [isLoggedIn] = useState(false);
-  useEffect(() => {
-    if (isLoggedIn) {
-      console.log("User has successfully logged in!");
-    }
-  }, [isLoggedIn]);
-
   const navLinkClassName = ({ isActive }) =>
     `nav-link${isActive ? " active" : ""}`;
 
+  let { userLogin } = useContext(UserContext);
   return (
     <>
       <Navbar bg="dark" data-bs-theme="dark">
@@ -46,12 +41,18 @@ function NavbarEl() {
             <NavLink className={navLinkClassName} to="/aboutus">
               About
             </NavLink>
+            <NavLink className={navLinkClassName} to="/actors">
+              Actors
+            </NavLink>
           </Nav>
           <div className="d-flex gap-5">
-            {isLoggedIn}
-            <Link to="/login" className="text-decoration-none">
-              <LoginBtn />
-            </Link>{" "}
+            {userLogin !== null ? (
+              <LogoutBtn />
+            ) : (
+              <Link to="/login" className="text-decoration-none">
+                <LoginBtn />
+              </Link>
+            )}
           </div>
         </Container>
       </Navbar>
